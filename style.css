@@ -1,0 +1,384 @@
+/* ============================
+   RESET & BASE
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f5eaff;
+  background: linear-gradient(
+      180deg,
+      #250036,
+      #3d0060,
+      #5a008f,
+      #7d00c8,
+      #5a008f,
+      #3d0060,
+      #250036
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+/* Semua section transparan biar nyambung */
+section {
+  padding: 100px 40px;
+  text-align: center;
+  background: transparent !important;
+}
+
+
+/* ============================
+   NAVBAR
+============================ */
+header {
+  background: rgba(30, 0, 45, 0.65);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+nav ul li a {
+  color: #e5cfff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffce3a;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #ffdf5e;
+  cursor: pointer;
+}
+
+/* ============================
+   NAVBAR MOBILE
+============================ */
+@media (max-width: 850px) {
+
+  nav ul {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: rgba(75, 0, 130, 0.95); 
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    transition: 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+  }
+
+  /* TAMPILKAN NAV SAAT CHECKBOX AKTIF */
+  #menu-toggle:checked ~ nav ul {
+    right: 0;
+  }
+
+  /* TAMPILKAN HAMBURGER DI MOBILE */
+  .menu-icon {
+    display: block;
+  }
+
+  /* SEMBUNYIKAN MENU DESKTOP */
+  nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffdf5e;
+  }
+}
+
+
+/* ============================
+   HERO
+============================ */
+#hero {
+  padding-top: 130px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-text h2 span {
+  color: #ffdf5e;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  color: #e8d7ff;
+  font-size: 30px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #ffd54a;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #3a0060;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background: #ffbe19;
+}
+
+/* ============================
+   ABOUT
+============================ */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12%;
+  border: 4px solid rgba(255,255,255,0.4);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  color: #f5eaff;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  color: #ffdf5e;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* ============================
+   GRID CARD (Portfolio, BayWorks)
+============================ */
+.grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 18px;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #ffdf5e;
+  margin-bottom: 5px;
+}
+
+
+/* ==========================
+   CERITA AJA
+============================ */
+
+.cerita-text {
+  flex: 1;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.subjudul-special {
+  margin-top: 70px;
+  font-size: 40px;
+  color: #ffbe19;
+}
+.btn-cerita {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: #ffb300;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ============================
+   TESTIMONI
+============================ */
+.chat-box {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bubble {
+  background: rgba(255,255,255,0.10);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+}
+
+.bubble span {
+  display: block;
+  margin-top: 10px;
+  color: #ffdf5e;
+  font-weight: 600;
+}
+
+
+/* ============================
+   CONTACT
+============================ */
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-item {
+  width: 140px;
+  height: 140px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(247, 212, 11, 0.411);
+  transition: 0.25s;
+}
+
+.contact-item:hover {
+  transform: translateY(-6px);
+}
+
+.contact-item img {
+  width: 60px;
+}
+
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  color: #ffdf5e;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 850px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    text-align: center;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+  nav ul {
+    gap: 10px;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+  .hero-text h2 {
+    font-size: 36px;
+  }
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
