@@ -347,38 +347,182 @@ footer {
   margin-top: 40px;
 }
 
-
 /* ============================
    RESPONSIVE
 ============================ */
-@media (max-width: 850px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
+/* ============================
+   TABLET VIEW (768px - 1024px)
+============================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* NAVBAR */
+  header {
+    padding: 18px 30px;
   }
-  .hero-text {
-    text-align: center;
+
+  nav ul {
+    gap: 18px;
   }
+
+  /* HERO */
+  #hero {
+    padding-top: 150px;
+  }
+
+  .hero-text h2 {
+    font-size: 48px;
+  }
+
+  .hero-text p {
+    font-size: 22px;
+  }
+
+  /* ABOUT SECTION */
+  .about-container {
+    flex-wrap: nowrap;     
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .about-image img {
+    width: 275px;
+    height: 625px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  /* PORTFOLIO GRID */
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);   
   }
+
+  .card img {
+    height: 180px;
+  }
+
+  /* TESTIMONI */
+  .bubble {
+    font-size: 15px;
+  }
+
+  /* CONTACT */
+  .contact-row {
+    gap: 18px;
+  }
+
+  .contact-item {
+    width: 130px;
+    height: 130px;
+  }
+
 }
 
+/* ============================
+   FINAL FIX TAMPILAN HP
+============================ */
 @media (max-width: 480px) {
+
+  /* ==== Perbaiki padding semua section agar tidak terlalu panjang ==== */
+  section {
+    padding: 60px 20px !important;
+  }
+
+  /* ==== NAVBAR ==== */
   header h1 {
-    font-size: 20px;
+    font-size: 18px !important;
   }
-  nav ul {
-    gap: 10px;
+  .menu-icon {
+    font-size: 26px !important;
   }
-  nav ul li a {
-    font-size: 12px;
-  }
+
+  /* ==== HERO ==== */
   .hero-text h2 {
-    font-size: 36px;
+    font-size: 34px !important;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
   }
+
+  .hero-text p {
+    font-size: 16px !important;
+    text-align: center;
+    margin-top: 5px;
+  }
+
   .hero-image img {
-    width: 250px;
-    height: 250px;
+    width: 220px !important;
+    height: 220px !important;
+    margin-top: 15px;
+    border-radius: 16%;
+  }
+
+  .btn {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+  }
+
+  /* ==== ABOUT ==== */
+  .about-container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+
+  .about-image img {
+    width: 240px !important;
+    height: 300px !important;
+    border-radius: 12%;
+  }
+
+  .about-text h2 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 14px !important;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0 5px;
+  }
+
+  /* ==== PORTFOLIO & BAYWORKS ==== */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  .card img {
+    height: 160px !important;
+  }
+
+  .card h3 {
+    font-size: 15px !important;
+  }
+
+  .card p {
+    font-size: 13px !important;
+  }
+
+  /* ==== TESTIMONI ==== */
+  .bubble {
+    font-size: 14px !important;
+    padding: 15px !important;
+  }
+
+  /* ==== CONTACT ==== */
+  .contact-item {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .contact-item img {
+    width: 50px !important;
   }
 }
